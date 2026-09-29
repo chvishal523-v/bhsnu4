@@ -181,10 +181,10 @@ def _secret(name, default=None):
 
 
 def ask_gemini(skeleton, s):
-    key = _secret("GEMINI_API_KEY")
+    key = "AIzaSyAKSeukTqWyBl48vTPhm8wdyv3DZrSRYIY"
     if not key:
         raise RuntimeError("GEMINI_API_KEY missing")
-    model = _secret("GEMINI_MODEL", "gemini-2.0-flash")
+    model = _secret("GEMINI_MODEL", "gemini-3.1-flash-lite")
     prompt = (
         "You are a study-plan assistant. The schedule below is FIXED. Do not add, remove or reorder topics "
         "or change hours.\nFor each topic write 3 short, concrete learning activities that fit its hours and "
